@@ -1,12 +1,22 @@
-node_modules
+# Rust build artifacts
+target/
+# rustfmt backup files (when --backup is used)
+**/*.rs.bk
+*.pem
+.DS_Store
+
+#cursor files
+.cursor/
+
+# Legacy artifacts (safe to delete)
+node_modules/
+dist/
+bin/
+builds/
 config
 credentials
-goAws
-av.pem
-servers.json
-bin/
-run.sh
 credentials.json
-builds
-.DS_Store
+servers.json
 region.json
+goAws
+run.sh

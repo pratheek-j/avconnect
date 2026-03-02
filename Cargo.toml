@@ -1,0 +1,30 @@
+[package]
+name = "avconnect"
+version = "3.0.0"
+edition = "2021"
+description = "Internal infra TUI — SSH host selection, SFTP transfer, config"
+authors = ["DataNimbus"]
+license = "MIT"
+
+[dependencies]
+ratatui = "0.29"
+crossterm = "0.28"
+tokio = { version = "1", features = ["full"] }
+anyhow = "1"
+dirs = "5"
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+fuzzy-matcher = "0.3"
+shellexpand = "2"
+aws-config = "1"
+aws-sdk-ec2 = "1"
+russh = "0.45"
+russh-sftp = "2"
+ssh-key = "0.6"
+async-trait = "0.1"
+whoami = "1"
+
+[profile.release]
+opt-level = "z"
+strip = true
+lto = true
